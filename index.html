@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles-global.css">
+  <meta property="og:title" content="Mi proyecto del curso Flexbox Layout y Componentes" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rivaldoesteban.github.io/Curso-flexbox-layout-components/" />
+  <meta property="og:image" content="./images/grand-scape.png`" />
+  <meta property="og:description" content="Todo lo que  necesitas saber sobre Flex y lo necesario de Accesibilidad" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Spotifu 2.0</title>
+</head>
+<body class="body">
+  <div class="layout" id="lay">
+    <div class="layout-block main">
+      <div class="layout-sidebar">
+        <div class="sidebar">
+          <header class="logo">
+            <a href="/" aria-current="pag">
+              <img src="images/spotifu-logo.png" class="logo-image" alt="Logo de Spotifu" title="Logo de Spotifu">
+            </a>
+          </header>
+          <nav class="menu" arias-label="menu principal">
+            <ul class="menu-list">
+              <li class="menuIten is-active">
+                <a href="./index.html" class="link" aria-current="page">
+                  <i class="icon-home" aria-hidden="true"></i>
+                  <span>Inicio</span>
+                </a>
+              </li>
+              <li class="menuIten ">
+                <a href="./songs-album.html" class="link">
+                  <i class="icon-search" aria-hidden="true"></i>
+                  <span>Buscar</span>
+                </a>
+              </li>
+              <li class="menuIten">
+                <a href="./songs-album.html" class="link">
+                  <i class="icon-creditCard" aria-hidden="true"></i>
+                  <span>Premium</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="list biblioteca" aria-label="Tu biblioteca">
+            <h2 class="list-title">Tu biblioteca</h2>
+            <ul class="list-content">
+              <li class="list-item">
+                <a href="./songs-album.html" class="link">Creada para ti</a>
+              </li>
+              <li class="list-item">
+                <a href="./songs-album.html" class="link">Escuchado recientemente</a>
+              </li>
+              <li class="list-item">
+                <a href="./songs-album.html" class="link">Tus me gusta</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="list" aria-label="Playlist">
+            <h2 class="list-title">Playlist</h2>
+            <ul class="list-content">
+              <li class="list-item">
+                <span class="ellipsis">
+                  <a href="./songs-album.html" class="link">Naruto al 100% para prog Naruto al 100% para prog Naruto al 100% para prog </a>
+                </span>
+              </li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Naruto al 100% para progr…</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Para cantar en la ducha</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Sin parar</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Naruto openings</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Boku no pico</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">This is Pokémon</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Más populares de la semana</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Mis pistas de shazam</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Audio Library</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Amor y otras</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Latin</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Pokemon</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Para cantar</a></li>
+              <li class="list-item"><a href="./songs-album.html" class="link">Yui</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="layout-main">
+        <div class="page">
+          <div class="sticky">
+            <div class="page-block">
+              <header class="header" aria-label="barra superior y menú del usuario">
+                <div class="navigation">
+                  <div class="navigation-buttons-container">
+                    <a href="./index.html">
+                      <button class="navigation-prev" aria-label="volver" title="avanzar">
+                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                      </button>
+                    </a>
+                    <a href="./songs-album.html">
+                      <button class="navigation-next" disabled aria-label="avanzar" title="avanzar">
+                        <i class="icon-arrowRight" aria-hidden="true"></i>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <form class="search" role="search" aria-label="Buscar por artistas, canciones o podcast">
+                  <i class="icon-search" aria-hidden="true"></i>
+                  <input type="search" placeholder="Buscar por artistas, canciones o podcast">
+                </form>
+              </header>
+            </div>
+          </div>
+          <main class="page-block">
+            <section class="playlistList" aria-labelledby="region1">
+              <div class="playlistList-top">
+                <h2 class="playlistList-title" id="region1">Inicio</h2>
+                <div class="navigation">
+                  <div class="navigation-buttons-container">
+                    <button class="navigation-prev" aria-label="volver" title="avanzar">
+                      <i class="icon-arrowLeft" aria-hidden="true"></i>
+                    </button>
+                    <button class="navigation-next" disabled aria-label="avanzar" title="avanzar">
+                      <i class="icon-arrowRight" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistList-container">
+                <div class="playlistList-content">
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/1.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Mansión Regueton</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/latino.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Viva Latino!</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/hits.jpeg" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Future Hits Latin</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/electro.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Electronica & Dance</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/flow.jpeg" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Dale Flow</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/anime-hits.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Naruto Openins & endings</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="playlistList-content">
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/top-bad.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Top Artistas Perú 2020</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/top-canciones.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Top canciones del 2020</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/top-female.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Top Artista Mujer 2020</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/top-artist.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Top Artista Hombre 2020</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/top-track.png" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Top tracks del 2020</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="./songs-album.html">
+                    <div class="playlistB">
+                      <div class="playlistB-cover">
+                        <img src="images/cover/travis.jpeg" width="76" height="76" alt="Cover de playlist anime hits">
+                      </div>
+                      <div class="playlistB-details">
+                        <h3 class="playlistB-title">Mix Hip Hop</h3>
+                        <div class="playlistB-control">
+                          <button class="buttonIcon is-primary" role="button" aria-label="Reproducir la lista de reproduccion"
+                            title="Reproducir la lista de reproduccion">
+                            <i class="icon-play" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section class="playlistList" aria-labelledby="region2">
+              <div class="playlistList-top">
+                <h2 class="playlistList-title" id="region2">Escuchado recientemente</h2>
+                <div class="navigation">
+                  <div class="navigation-buttons-container">
+                    <button class="navigation-prev" aria-label="volver" title="avanzar">
+                      <i class="icon-arrowLeft" aria-hidden="true"></i>
+                    </button>
+                    <button class="navigation-next" disabled aria-label="avanzar" title="avanzar">
+                      <i class="icon-arrowRight" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistList-content">
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/top-50-mx.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 México</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/croatia.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Croatia</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                        <img src="images/cover/top-50-global.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Global</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/colombia.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Colombia</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/top-50-peru.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Perú</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/francia.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Francia</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/top-50-spain.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 España</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/usa.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 U.S.A</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/top-50-chile.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Top 50 Chile</h3>
+                    <h4 class="playlist-description">Tu actulizacion diaria de las canciones mas escuchadas</h4>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section class="playlistList" aria-labelledby="region3">
+              <div class="playlistList-top">
+                <h2 class="playlistList-title" id="region3">Playlists</h2>
+                <div class="navigation">
+                  <div class="navigation-buttons-container">
+                    <button class="navigation-prev" aria-label="volver" title="avanzar">
+                      <i class="icon-arrowLeft" aria-hidden="true"></i>
+                    </button>
+                    <button class="navigation-next" disabled aria-label="avanzar" title="avanzar">
+                      <i class="icon-arrowRight" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistList-content">
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/daily-mix1-png.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily mix 1</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix2.jpg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily Mix 2</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix3.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily mix 3</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix4.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily Mix 4</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix5.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Dailymix 5</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/daily6.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Your Daily Mix 6</h3>
+                    <h4 class="playlist-description">Naruto, Your Name, Weathering With You</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/daily-mix1-png.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily mix 1</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix2.jpg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily Mix 2</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix3.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily mix 3</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix4.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Daily Mix 4</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/mix5.jpeg" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Dailymix 5</h3>
+                    <h4 class="playlist-description">ReslB, Maluman, Danny Ocean y más</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/daily6.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Your Daily Mix 6</h3>
+                    <h4 class="playlist-description">Naruto, Your Name, Weathering With You</h4>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section class="playlistList" aria-labelledby="region4">
+              <div class="playlistList-top">
+                <h2 class="playlistList-title" id="region4">Podcast</h2>
+                <div class="navigation">
+                  <div class="navigation-buttons-container">
+                    <button class="navigation-prev" aria-label="volver" title="avanzar">
+                      <i class="icon-arrowLeft" aria-hidden="true"></i>
+                    </button>
+                    <button class="navigation-next" disabled aria-label="avanzar" title="avanzar">
+                      <i class="icon-arrowRight" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="playlistList-content">
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast1.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Made in Medellín</h3>
+                    <h4 class="playlist-description">Spotify studios</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast2.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Se Regalan Dudas</h3>
+                    <h4 class="playlist-description">Dudas Media</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast3.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Hablando huevadas</h3>
+                    <h4 class="playlist-description">Spotify production</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast4.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Sin paltas</h3>
+                    <h4 class="playlist-description">Mia Nauca y omar </h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/luis-pillo.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">En cortinas</h3>
+                    <h4 class="playlist-description">en cortinas con luis</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/cotorrisa.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">la cotorrisa</h3>
+                    <h4 class="playlist-description">podcast humoristico</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast1.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Made in Medellín</h3>
+                    <h4 class="playlist-description">Spotify studios</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast2.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Se Regalan Dudas</h3>
+                    <h4 class="playlist-description">Dudas Media</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast3.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Hablando huevadas</h3>
+                    <h4 class="playlist-description">Spotify production</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/podcast4.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">Sin paltas</h3>
+                    <h4 class="playlist-description">Mia Nauca y omar </h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/luis-pillo.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">En cortinas</h3>
+                    <h4 class="playlist-description">en cortinas con luis</h4>
+                  </div>
+                </a>
+                <a href="./songs-album.html">
+                  <div class="playlistA">
+                    <div class="playlistA-cover">
+                      <img src="images/cover/cotorrisa.png" width="150" height="150" alt="Cover de la playlist anime hits">
+                      <button class="buttonIcon is-primary" role="button" aria-label="Reproducir" title="Reproducir" role="switch">
+                        <i class="icon-play" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <h3 class="playlist-title">la cotorrisa</h3>
+                    <h4 class="playlist-description">podcast humoristico</h4>
+                  </div>
+                </a>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="layout-block">
+      <footer class="layout-bottom">
+        <div class="player">
+          <div class="player-nowPlaying">
+            <div class="nowPlaying">
+              <div class="nowPlaying-cover">
+                <img src="images/grand-scape.png" alt="Portada de Grand Scape"
+                  title="Portada de Grand Scape de (RADWIMPS, Toko Miura)">
+              </div>
+              <div class="nowPlaying-details">
+                <div class="nowPlaying-description">
+                  <a href="#song" class="nowPlaying-title">Grand Escape (feat. Tokio Miura)</a>
+                  <a href="#artist" class="nowPlaying-artist">RADWIMPS, Toko Miura</a>
+                </div>
+                <div class="nowPlaying-actions">
+                  <button class="player-control" role="switch" aria-checked="false" aria-label="Guardar en tu biblioteca"
+                    title="Guardar en tu biblioteca">
+                    <i class="icon-heart" role="switch" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-playerControls">
+            <div class="playerControls">
+              <div class="playerControls-buttons" aria-label="Controles de reproducción">
+                <button class="buttonIcon">
+                  <i class="icon-prev " aria-label="Anterior"></i>
+                </button>
+                <button class="buttonIcon is-white">
+                  <i class="icon-play " aria-label="Reproducción"></i>
+                </button>
+                <button class="buttonIcon">
+                  <i class="icon-next" aria-label="Siguiente "></i>
+                </button>
+              </div>
+              <div class="playerPlayback">
+                <span class="playerPlayback-progressTime">01:40</span>
+                <div class="playerPlayback-slider">
+                  <div class="slider">
+                    <div class="slider-progress">
+                      <button class="slider-button" aria-label="controlar el progreso de la reproducción"></button>
+                    </div>
+                  </div>
+                </div>
+                <span class="playerPlayback-progressTime">01:40</span>
+              </div>
+            </div>
+          </div>
+          <div class="player-playerVolume">
+            <div class="playerVolume">
+              <button class="player-control" aria-label="Silenciar" aria-describedby="volumen-icon">
+                <i class="icon-volumeUp" id="volumen-icon" role="presentation" aria-label="volumen alto"></i>
+              </button>
+              <div class="playerVolume-slider">
+                <div class="slider">
+                  <div class="slider-progress">
+                    <button class="slider-button" aria-label="controlar el progreso de la reproducción"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- <script src="js/js-global.js" type="module"></script> -->
+  <script src="js/spotifu.js"></script>
+</body>
+</html>
