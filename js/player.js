@@ -81,7 +81,12 @@ function timeElapsed() {
   const tagAudio = document.getElementById("tag-audio");
   const timeStart = document.getElementById("time-start");
   setInterval(() => {
-    timeStart.textContent = tagAudio.currentTime.toFixed(0) / 100;
+    const minutes = Math.floor(tagAudio.currentTime / 60);
+    const segundes = Math.floor(tagAudio.currentTime % 60)
+      .toString()
+      .padStart(2, "00");
+    const time = `${minutes}:${segundes}`;
+    timeStart.textContent = time;
   }, 1000);
 }
 
